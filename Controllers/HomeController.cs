@@ -19,15 +19,20 @@ public class HomeController : Controller
     }
     public IActionResult Tutorial()
     {
-        
         return View();
     }
     public IActionResult Comenzar()
     {
-        return View();
+        return View("Habitacion" + Escape.GetEstadoJuego());
     }
     public IActionResult Habitacion(int sala, string clave)
     {
+        bool ok= Escape.ResolverSala(sala,  clave);
+        //la logica si esta ok que hace y si no que hace
+        while(ok == false)
+        {
+            
+        }
         return View();
     }
     public IActionResult Privacy()
