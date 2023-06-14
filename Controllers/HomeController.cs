@@ -21,21 +21,26 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Creditos()
+    {
+        return View();
+    }
     public IActionResult Comenzar()
     {
         return View("Habitacion" + Escape.GetEstadoJuego());
     }
     public IActionResult Habitacion(int sala, string clave)
     {
-        ViewBag.sala = sala;
-        ViewBag.clave = clave;
         bool ok= Escape.ResolverSala(sala, clave);
         if (!ok){
             ViewBag.paso = "no";
         } else {
             ViewBag.paso = "si";
         }
-        return View();
+        //ViewBag.Pista1 = Escape.matPistas[Escape.GetEstadoJuego(),0];
+        //ViewBag.Pista2 = Escape.matPistas[Escape.GetEstadoJuego(),1];
+        //ViewBag.Pista3 = Escape.matPistas[Escape.GetEstadoJuego(),2];
+        return View("Habitacion" + Escape.GetEstadoJuego());
     }
     public IActionResult Privacy()
     {

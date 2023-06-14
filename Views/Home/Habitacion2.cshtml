@@ -1,4 +1,10 @@
 <div>
     Ya accediste al código completo. Resulta que este lo único que hace el programa es mostrar memes programadores, pero hay un problema, algunos están incompletos,deberás ir completándolos para avanzar: 
 - Conquistar a una programadora es difícil, el otro dia lo intente y no se …
+  <form method="post" action="~/Home/Habitacion">
+        <input class="form-control" type="text" placeholder="Respuesta" name="clave">
+        <input type="number" value="2" hidden name="sala">
+        <button class="btn btn-secondary" type="submit">Validar</button>
+        <button class="btn btn-secondary" onclick="alert(@ViewBag.Pista+Escape.GetEstadoJuego())">Pista</button>
+    </form>
 </div>

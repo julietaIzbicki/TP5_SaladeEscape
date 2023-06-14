@@ -31,3 +31,13 @@ body {
   background-color: black;
 }
 
+.imgCredit {
+  display: flex;
+  margin: 2%;
+  border-radius: 100%;
+  justify-content: space-evenly;
+}
+
+pre{
+  font-family: 'DotGothic16', sans-serif;
+}
