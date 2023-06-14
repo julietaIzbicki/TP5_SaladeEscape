@@ -27,14 +27,14 @@ public class HomeController : Controller
     }
     public IActionResult Habitacion(int sala, string clave)
     {
+        ViewBag.sala = sala;
+        ViewBag.clave = clave;
         bool ok= Escape.ResolverSala(sala, clave);
-        //la logica si esta ok que hace y si no que hace
-        while(ok == false)
-        {
-
+        if (!ok){
+            ViewBag.paso = "no";
+        } else {
+            ViewBag.paso = "si";
         }
-        // si ok = true 
-        // sala = estadoJuego 
         return View();
     }
     public IActionResult Privacy()

@@ -29,14 +29,14 @@ public static class Escape
     }
     public static bool ResolverSala(int Sala, string Incognita)
     {
-        if(incognitasSalas[Sala-1] != Incognita)
-        {
-            return false;
-        }
-        else
+        if(Incognita == incognitasSalas[Sala-1])
         {
             estadoJuego++;
             return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
