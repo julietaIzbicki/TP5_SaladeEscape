@@ -1,6 +1,6 @@
 public static class Escape
 {
-    private static int estadoJuego=1;
+    private static int estadoJuego=0;
     private static string[] incognitasSalas = new string[4];
     private static string[,] matPistas = new string[4,3];
     
@@ -25,6 +25,10 @@ public static class Escape
     }
     public static int GetEstadoJuego()
     {
+        if(estadoJuego == 0){
+            InicializarJuego();
+            estadoJuego++;
+        }
         return estadoJuego;
     }
     public static bool ResolverSala(int Sala, string Incognita)
