@@ -3,9 +3,9 @@
     <br>
     <img class="img" src="/imagenes/CSS.png" alt="">
       <form method="post" action="~/Home/Habitacion">
-        <input class="form-control" type="text" placeholder="Respuesta" name="clave">
+        <input class="form-control" type="text" placeholder="Respuesta" name="clave" autocomplete="off">
         <input type="number" value="3" hidden name="sala">
         <button class="btn btn-secondary" type="submit">Validar</button>
-         <button class="btn btn-secondary" onclick="alert(@ViewBag.Pista+Escape.GetEstadoJuego())">Pista</button>
+        <button class="btn btn-secondary" onclick="alert('Pista: Hojas de estilo en cascada')">Pista</button>
     </form>
 </div>

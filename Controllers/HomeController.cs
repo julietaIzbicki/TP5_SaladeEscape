@@ -27,6 +27,7 @@ public class HomeController : Controller
     }
     public IActionResult Comenzar()
     {
+        Escape.InicializarJuego();
         return View("Habitacion" + Escape.GetEstadoJuego());
     }
     public IActionResult Habitacion(int sala, string clave)
@@ -36,10 +37,12 @@ public class HomeController : Controller
             ViewBag.paso = "no";
         } else {
             ViewBag.paso = "si";
+            if(Escape.GetEstadoJuego() == 5)
+            {
+                return View("Victoria");
+            }
         }
-        //ViewBag.Pista1 = Escape.matPistas[Escape.GetEstadoJuego(),0];
-        //ViewBag.Pista2 = Escape.matPistas[Escape.GetEstadoJuego(),1];
-        //ViewBag.Pista3 = Escape.matPistas[Escape.GetEstadoJuego(),2];
+        
         return View("Habitacion" + Escape.GetEstadoJuego());
     }
     public IActionResult Privacy()

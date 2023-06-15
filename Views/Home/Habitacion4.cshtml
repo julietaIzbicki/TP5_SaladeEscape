@@ -2,9 +2,9 @@
    Por último, no te olvides del atajo para guardar este código, si se llega a borrar, te perdemos
     <img class="img" src="/imagenes/CtrlS.png" alt="">
       <form method="post" action="~/Home/Habitacion">
-        <input class="form-control" type="text" placeholder="Respuesta" name="clave">
+        <input class="form-control" type="text" placeholder="Respuesta" name="clave" autocomplete="off">
         <input type="number" value="4" hidden name="sala">
         <button class="btn btn-secondary" type="submit">Validar</button>
-         <button class="btn btn-secondary" onclick="alert(@ViewBag.Pista+Escape.GetEstadoJuego())">Pista</button>
+        <button class="btn btn-secondary" onclick="alert('Pista: Se usa para guardar cambios en un archivo')">Pista</button>
     </form>
 </div>
