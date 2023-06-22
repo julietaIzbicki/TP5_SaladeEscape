@@ -41,3 +41,9 @@ body {
 pre{
   font-family: 'DotGothic16', sans-serif;
 }
+
+
+.btn-success{
+  background-color: rgb(62, 247, 139);
+  color:black;
+}
